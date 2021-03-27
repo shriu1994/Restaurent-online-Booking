@@ -1,133 +1,186 @@
-<!-- signin.php -->
-<?php include 'template/header.php'; ?>
-  <body>
-    
-    <?php include 'template/nav-bar.php'; ?>
-    <!-- END nav -->
-    
-    <section class="home-slider owl-carousel" style="height: 400px;">
-      <div class="slider-item" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text align-items-center justify-content-center">
-            <div class="col-md-10 col-sm-12 ftco-animate text-center" style="padding-bottom: 25%;">
-              <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>Login</span></p>
-              <h1 class="mb-3">Login</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<?php session_start(); ?>
+<!doctype html>
+<html class="fixed">
+	<head>
 
-    <section class="ftco-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Login</span>
-            <h2>Log In Our Site</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 dish-menu">
+		<!-- Basic -->
+		<meta charset="UTF-8">
 
-            <div class="nav nav-pills justify-content-center ftco-animate" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link py-3 px-4 active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><span class="flaticon-meat"></span> Login</a>
-              
-            </div>
+		<meta name="keywords" content="HTML5 Admin Template" />
+		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
+		<meta name="author" content="okler.net">
 
-            <div class="tab-content py-5" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                <div class="row">
-                  <div class="col-lg-2"></div>
-                  <div class="col-lg-8">
-                    <div class="menus d-flex ftco-animate" style="background: white;">
-	                    <div class="row" style="width: 100%">
-					        <div class="col-md-12">
-					            <form action="" method="POST" enctype="multipart/form-data">
-					              <div class="form-group">
-					                <input type="email" name="email" class="form-control" required="" placeholder="Your Email">
-					              </div>
-					              <div class="form-group">
-					                <input type="password" name="password" class="form-control" required="" placeholder="Your Password">
-					              </div>
-					              <div class="form-group">
-					                <input type="submit" value="Login" name="login" class="btn btn-primary py-3 px-5">
-					              </div>
-					            </form>
-                      <p class="text-center">For Register <a href="register.php">Click Here.</a> </p>
-					        </div>
-					    </div>
-	                </div>
-                  </div>
-                </div>
-              </div><!-- END -->
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		<!-- Web Fonts  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
 
-    <?php include 'template/instagram.php'; ?>
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
 
-    <?php include 'template/footer.php'; ?>
-    
-    <?php include 'template/script.php'; ?>
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme.css" />
 
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
 
-    
-  </body>
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
+
+		<!-- Head Libs -->
+		<script src="assets/vendor/modernizr/modernizr.js"></script>
+
+	</head>
+	<body>
+		<!-- start: page -->
+		<section class="body-sign">
+			<div class="center-sign">
+				<a href="" class="logo pull-left">
+					<img src="assets/images/logo.png" height="54" alt="Porto Admin" />
+				</a>
+
+				<div class="panel panel-sign">
+					<div class="panel-title-sign mt-xl text-right">
+						<h2 class="title text-uppercase text-bold m-none"><i class="fa fa-user mr-xs"></i> Sign In</h2>
+					</div>
+					<div class="panel-body">
+						<form action="" method="POST">
+							<div class="form-group mb-lg">
+								<label>Email</label>
+								<div class="input-group input-group-icon">
+									<input name="email" type="email" class="form-control input-lg" required="" />
+									<span class="input-group-addon">
+										<span class="icon icon-lg">
+											<i class="fa fa-user"></i>
+										</span>
+									</span>
+								</div>
+							</div>
+
+							<div class="form-group mb-lg">
+								<div class="clearfix">
+									<label class="pull-left">Password</label>
+									<!-- <a href="pages-recover-password.html" class="pull-right">Lost Password?</a> -->
+								</div>
+								<div class="input-group input-group-icon">
+									<input name="password" type="password" class="form-control input-lg" required="" />
+									<span class="input-group-addon">
+										<span class="icon icon-lg">
+											<i class="fa fa-lock"></i>
+										</span>
+									</span>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-8">
+									<div class="checkbox-custom checkbox-default">
+										<!-- <input id="RememberMe" name="rememberme" type="checkbox"/>
+										<label for="RememberMe">Remember Me</label> -->
+									</div>
+								</div>
+								<div class="col-sm-4 text-right">
+									
+									<input type="submit" class="btn btn-primary btn-block" name="login" value="Sign In">
+								</div>
+							</div>
+
+							<span class="mt-lg mb-lg line-thru text-center text-uppercase">
+								<span>or</span>
+							</span>
+
+							<div class="mb-xs text-center">
+								<a class="btn btn-facebook mb-md ml-xs mr-xs">Connect with <i class="fa fa-facebook"></i></a>
+								<a class="btn btn-twitter mb-md ml-xs mr-xs">Connect with <i class="fa fa-twitter"></i></a>
+							</div>
+
+							<!-- <p class="text-center">Don't have an account yet? <a href="pages-signup.html">Sign Up!</a> -->
+
+						</form>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<!-- end: page -->
+
+		<!-- Vendor -->
+		<script src="assets/vendor/jquery/jquery.js"></script>
+		<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
+		<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
+		<script src="assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="assets/javascripts/theme.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="assets/javascripts/theme.custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="assets/javascripts/theme.init.js"></script>
+
+	</body>
 </html>
-
-
-
 <?php 
-  if (isset($_POST['login'])) {
-    
-  $email = $_POST['email'];
-  $password = $_POST['password'];
+	
+// $password = "123";
+// $ecnpassword= md5($password);
 
-  
+// echo $ecnpassword;
 
-  include 'dbCon.php';
-  $con = connect();
+	if (isset($_POST['login'])) {
+		
+	$email = $_POST['email'];
+	$password = $_POST['password'];
 
-  $emailSQL = "SELECT * FROM restaurant_info WHERE email = '$email';";
+	//$ecnpassword= md5($password);
 
-  $passwordSQL = "SELECT * FROM restaurant_info WHERE email = '$email' And password = '$password';";
+	include 'dbCon.php';
+	$con = connect();
 
-  $emailResult = $con->query($emailSQL);
+	$emailSQL = "SELECT * FROM restaurant_info WHERE email = '$email';";
 
-  $passwordResult = $con->query($passwordSQL);
+	$passwordSQL = "SELECT * FROM restaurant_info WHERE email = '$email' And password = '$password';";
 
-  if ($emailResult->num_rows <= 0) {
-    echo '<script>alert("This Email Does Not Exist.")</script>';
-    echo '<script>window.location="login.php"</script>';
-  }else if ($passwordResult->num_rows <= 0) {
-    echo '<script>alert("This Password is Incorrect.")</script>';
-    echo '<script>window.location="login.php"</script>';
-  }else{
+	$emailResult = $con->query($emailSQL);
 
-    $_SESSION['isLoggedIn'] = TRUE;
+	$passwordResult = $con->query($passwordSQL);
 
-    $SQL = "SELECT * FROM restaurant_info WHERE email = '$email' And password = '$password';";
+	if ($emailResult->num_rows <= 0) {
+		echo '<script>alert("This Email Does Not Exist.")</script>';
+		echo '<script>window.location="login.php"</script>';
+	}else if ($passwordResult->num_rows <= 0) {
+		echo '<script>alert("This Password is Incorrect.")</script>';
+		echo '<script>window.location="login.php"</script>';
+	}else{
 
-    $result = $con->query($SQL);
+		$_SESSION['isLoggedIn'] = TRUE;
 
-    foreach ($result as $r) {
-      $_SESSION['id'] = $r['id'];
-      $_SESSION['name'] = $r['restaurent_name'];
-      $_SESSION['email'] = $r['email'];
-      $_SESSION['password'] = $r['password'];
-      $_SESSION['role'] = $r['role'];
-    }
-    if ($_SESSION['role'] == 1) {
-       echo '<script>window.location="dashboard/index.php"</script>';
-    }elseif ($_SESSION['role'] == 2) {
-      echo '<script>window.location="index.php"</script>';
-    } 
-    
-  }
+		$SQL = "SELECT * FROM restaurant_info WHERE email = '$email' And password = '$password';";
 
-  }
+		$result = $con->query($SQL);
+
+		foreach ($result as $r) {
+			$_SESSION['id'] = $r['id'];
+			$_SESSION['name'] = $r['restaurent_name'];
+			$_SESSION['email'] = $r['email'];
+			$_SESSION['password'] = $r['password'];
+			$_SESSION['role'] = $r['role'];
+		}
+		if($_SESSION['role'] == 1){
+			echo '<script>window.location="index.php"</script>';
+		}else{
+			echo '<script>window.location="../index.php"</script>';
+		}
+		
+	}
+
+	}
 ?>

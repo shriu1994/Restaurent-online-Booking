@@ -8,7 +8,7 @@ function connect($flag=TRUE){
 
 	// Create connection
 	if($flag){
-		$conn = new mysqli($servername, $username, $password, $dbName);
+		$conn = new mysqli($servername, $username, $password,$dbName);
 	}else{
 		$conn = new mysqli($servername, $username, $password);
 	}

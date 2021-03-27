@@ -117,6 +117,7 @@ if (!isset($_SESSION['isLoggedIn'])) {
 			</div>
 
 			<?php include 'template/right-bar.php'; ?>
+
 		</section>
 		<script type="text/javascript">
 	       function Done(){
